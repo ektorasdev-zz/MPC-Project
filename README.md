@@ -22,7 +22,7 @@ The equations used for the model where:
 
 The final values for the timestep length (N) and elapsed duration (dt), were 12 and 0.1 respectively. 
 
-The first values i tried were 25 and 0.05, as stated in the classroom quizzes. With these values the car finishes the track without steering of the track, but at some points during turns the car seemed to be acting kinda "shake" but it was still moving inside the bounds. So, i decided to tune them down with values 7 and 0.03 respectively. With these values, the car seemed to drive slower and was moving really close to the left curb, when it eventually drove off the track at the second turn. So after a few more different values the optimal ones seemed to be 12 and 0.1.
+The first values i tried were 25 and 0.05, as stated in the classroom quizzes. With these values the car finishes the track without steering of the track, but at some points during turns the car seemed to be acting kinda "shake" but it was still moving inside the bounds. So, i decided to tune them down with values 7 and 0.03 respectively. With these values, the car seemed to drive slower and was moving really close to the left curb, when it eventually drove off the track at the second turn. So after a few more different values the optimal ones seemed to be 12 and 0.1, with the car driving smoothly around the track.
 
 ## Dependencies
 
