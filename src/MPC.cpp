@@ -7,11 +7,11 @@ using CppAD::AD;
 
 // TODO: Set the timestep length and duration
 
-// We set the number of timesteps to 25
+// We set the number of timesteps to 12
 // and the timestep evaluation frequency or evaluation
-// period to 0.05.
-size_t N = 25;
-double dt = 0.05;
+// period to 0.12.
+size_t N = 12;
+double dt = 0.12;
 
 // This value assumes the model presented in the classroom is used.
 //
@@ -127,7 +127,7 @@ class FG_eval {
           // psi_[t] = psi[t-1] + v[t-1] / Lf * delta[t-1] * dt
           // v_[t] = v[t-1] + a[t-1] * dt
           // cte[t] = f(x[t-1]) - y[t-1] + v[t-1] * sin(epsi[t-1]) * dt
-          // epsi[t] = psi[t] - psides[t-1] + v[t-1] * delta[t-1] / Lf * dt
+          // epsi[t] = psi[t] - psides[t-1] + v[t-1] / Lf * delta[t-1] * dt
           fg[1 + x_start + t] = x1 - (x0 + v0 * CppAD::cos(psi0) * dt);
           fg[1 + y_start + t] = y1 - (y0 + v0 * CppAD::sin(psi0) * dt);
           fg[1 + psi_start + t] = psi1 - (psi0 - v0 / Lf * delta0 * dt);
