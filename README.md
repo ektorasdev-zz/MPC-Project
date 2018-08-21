@@ -5,7 +5,7 @@ Self-Driving Car Engineer Nanodegree Program
 
 ## Rubric
 
-- The Model
+- **The Model**
 
 
 ## Dependencies
