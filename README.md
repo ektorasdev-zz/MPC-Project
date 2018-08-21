@@ -5,7 +5,8 @@ Self-Driving Car Engineer Nanodegree Program
 
 ## Rubric
 
-- **The Model**
+### **The Model**
+
 The model used for this project, was the Kinematic Model, which includes the vehicles position (x, y), the orientation (pi), the velocity (v), the cross-track error (cte) and the orientation error (epsi). The actuators are steering angle (delta) and acceleration (a).
 
 The equations used for the model where:
