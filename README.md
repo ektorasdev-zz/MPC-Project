@@ -26,6 +26,10 @@ The first values i tried were 25 and 0.05, as stated in the classroom quizzes. W
 
 ### Polynomial Fitting and MPC Preprocessing
 
+The points are preprocessed, in order to transform them to vehicles coordinates. Then we apply a 3rd-order polynomial, to the transformed coordinates and then, the resulted polynomial coefficients are used to calculate the cross-track error (cte) and orientaion error (epsi).
+
+### Model Predictive Control with Latency
+
 
 
 ## Dependencies
