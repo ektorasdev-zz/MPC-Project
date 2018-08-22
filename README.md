@@ -30,7 +30,7 @@ The points are preprocessed, in order to transform them to vehicles coordinates.
 
 ### Model Predictive Control with Latency
 
-
+In order to simulate a real-life situation, the model is using a 100ms latency.
 
 ## Dependencies
 
