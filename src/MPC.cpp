@@ -57,22 +57,22 @@ class FG_eval {
 
     // The part of the cost based on the reference state.
       for(unsigned int i = 0; i < N; i++ ) {
-          fg[0] += 1000*CppAD::pow(vars[cte_start + i], 2);
-          fg[0] += 1000*CppAD::pow(vars[epsi_start + i], 2);
-          fg[0] += CppAD::pow(vars[v_start + i] - ref_v, 2);
+          fg[0] += 50*CppAD::pow(vars[cte_start + i], 2);
+          fg[0] += 50*CppAD::pow(vars[epsi_start + i], 2);
+          fg[0] += 2*CppAD::pow(vars[v_start + i] - ref_v, 2);
       }
 
       // Minimize the use of actuators.
       for (unsigned int i = 0; i< N - 1; i++) {
-          fg[0] += 50*CppAD::pow(vars[delta_start + i], 2);
+          fg[0] += 150*CppAD::pow(vars[delta_start + i], 2);
           fg[0] += 50*CppAD::pow(vars[a_start + i], 2);
       }
 
       // Minimize the value gap between sequential actuations.
       // (how smooth the actuations are)
       for (unsigned int i = 0; i < N - 2; i++) {
-          fg[0] += 250000*CppAD::pow(vars[delta_start + i + 1] - vars[delta_start + i], 2);
-          fg[0] += 5000*CppAD::pow(vars[a_start + i + 1] - vars[a_start + i], 2);
+          fg[0] += 35000*CppAD::pow(vars[delta_start + i + 1] - vars[delta_start + i], 2);
+          fg[0] += 15000*CppAD::pow(vars[a_start + i + 1] - vars[a_start + i], 2);
       }
 
     //
